@@ -168,11 +168,10 @@ sudo fail2ban-client status laravel-wordpress
 - ignoreip → include your IP and other admin IPs
 
 ### Example of detected logs
-
+```bash
 192.168.1.100 - - [16/Sep/2025:09:00:01 +0300] "GET /.env HTTP/1.1" 404 162 "-" "curl/7.68.0"
 203.0.113.45 - - [16/Sep/2025:09:05:12 +0300] "POST /wp-login.php HTTP/1.1" 404 245 "-" "Mozilla/5.0"
+```
 
-
-Powered by [Hitsukaya](https://hitsukaya.com)
-[![Hitsukaya](https://hitsukaya.com/assets/images/summary_large_image/summary_large_image-hitsukaya.png)](https://hitsukaya.com) Powered by Hitsukaya
+[![Hitsukaya](https://hitsukaya.com/assets/images/summary_large_image/summary_large_image-hitsukaya.png)](https://hitsukaya.com) 
 
