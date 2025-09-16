@@ -174,5 +174,5 @@ sudo fail2ban-client status laravel-wordpress
 
 
 Powered by [Hitsukaya](https://hitsukaya.com)
-[![Hitsukaya](https://hitsukaya.com/logo.png)](https://hitsukaya.com) Powered by Hitsukaya
+[![Hitsukaya](https://hitsukaya.com/assets/images/summary_large_image/summary_large_image-hitsukaya.png)](https://hitsukaya.com) Powered by Hitsukaya
 
