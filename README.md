@@ -72,8 +72,8 @@ failregex = ^<HOST> -.*"(GET|POST).*\.env.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*wp-json/.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*/wp-content/.*\.php.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*/wp-content/plugins/.*HTTP.*"
-            ^<HOST> -.*"(GET|POST).*/phpmyadmin/.*HTTP.*
-            ^<HOST> -.*"(GET|POST).*/adminer\.php.*HTTP.*
+            ^<HOST> -.*"(GET|POST).*/phpmyadmin/.*HTTP.*"
+            ^<HOST> -.*"(GET|POST).*/adminer\.php.*HTTP.*"
 
 # =========================
 # Node.js / Next.js / Nuxt
