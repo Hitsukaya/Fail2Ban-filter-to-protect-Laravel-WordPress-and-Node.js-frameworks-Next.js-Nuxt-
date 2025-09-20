@@ -72,8 +72,9 @@ failregex = ^<HOST> -.*"(GET|POST).*\.env.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*wp-json/.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*/wp-content/.*\.php.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*/wp-content/plugins/.*HTTP.*"
-            ^<HOST> -.*"(GET|POST).*/phpmyadmin/.*HTTP.*"
-            ^<HOST> -.*"(GET|POST).*/adminer\.php.*HTTP.*"
+			^<HOST> -.*"(GET|POST).*/phpmyadmin/.*HTTP.*"
+			^<HOST> -.*"(GET|POST).*/adminer\.php.*HTTP.*"
+
 
 # =========================
 # Node.js / Next.js / Nuxt
@@ -101,6 +102,7 @@ failregex = ^<HOST> -.*"(GET|POST).*\.env.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*dump\.sql.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*database\.sql.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*\.sql.*HTTP.*"
+			^<HOST> -.*"(GET|POST).*/uploads/.*\.(exe|dll|jar|py|rb).*HTTP.*"
 
 # =========================
 # Traversal / RCE / injection attempts
@@ -112,6 +114,7 @@ failregex = ^<HOST> -.*"(GET|POST).*\.env.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*\?ping=.*HTTP.*
             ^<HOST> -.*"(GET|POST).*\?run=.*HTTP.*
             ^<HOST> -.*"(POST).*/api/(login|auth).*HTTP.*
+			^<HOST> -.*"(POST).*/admin/login.*HTTP.*"
 
 # =========================
 # Crawlers / scanners / automated requests
@@ -132,6 +135,11 @@ failregex = ^<HOST> -.*"(GET|POST).*\.env.*HTTP.*"
             ^.*FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: <HOST>.*, request: ".*"
 
 ignoreregex =
+
+# =========================
+# Ignored regex (legit crawlers / SSL noise)
+# =========================
+#ignoreregex = .*Googlebot.*|.*bingbot.*|.*DuckDuckBot.*|.*Baiduspider.*|.*SSL_do_handshake.*|.*bad certificate.*|.*no shared cipher.*|.*connection reset by peer.*
 
 ```
 
