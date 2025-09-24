@@ -74,6 +74,7 @@ failregex = ^<HOST> -.*"(GET|POST).*\.env.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*/wp-content/plugins/.*HTTP.*"
 			^<HOST> -.*"(GET|POST).*/phpmyadmin/.*HTTP.*"
 			^<HOST> -.*"(GET|POST).*/adminer\.php.*HTTP.*"
+			^<HOST> -.*"(POST).*/wp-json/wp/v2/.*HTTP.*"
 
 
 # =========================
@@ -92,6 +93,7 @@ failregex = ^<HOST> -.*"(GET|POST).*\.env.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*pnpm-lock\.yaml.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*/dist/.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*/node_modules/.*HTTP.*"
+			^<HOST> -.*"(POST).*/api/.*HTTP.*" 
 
 # =========================
 # Uploads / backup / temp / dumps
