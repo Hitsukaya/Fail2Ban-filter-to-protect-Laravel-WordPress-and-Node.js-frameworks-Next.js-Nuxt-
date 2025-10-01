@@ -53,6 +53,7 @@ failregex = ^<HOST> -.*"(GET|POST).*\.env.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*webpack.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*vite.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*gulpfile.*HTTP.*"
+			^<HOST> -.*"(?:(GET|POST).*\.env).*" [45]\d{2} .*
 
 # =========================
 # Laravel debug & logs
@@ -76,7 +77,6 @@ failregex = ^<HOST> -.*"(GET|POST).*\.env.*HTTP.*"
 			^<HOST> -.*"(GET|POST).*/adminer\.php.*HTTP.*"
 			^<HOST> -.*"(POST).*/wp-json/wp/v2/.*HTTP.*"
 
-
 # =========================
 # Node.js / Next.js / Nuxt
 # =========================
@@ -93,7 +93,8 @@ failregex = ^<HOST> -.*"(GET|POST).*\.env.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*pnpm-lock\.yaml.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*/dist/.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*/node_modules/.*HTTP.*"
-			^<HOST> -.*"(POST).*/api/.*HTTP.*" 
+			^<HOST> -.*"(POST).*/api/.*HTTP.*"
+			^<HOST> -.*"(POST).*/api/(login|auth|register|password).*HTTP.*"			
 
 # =========================
 # Uploads / backup / temp / dumps
@@ -137,6 +138,7 @@ failregex = ^<HOST> -.*"(GET|POST).*\.env.*HTTP.*"
             ^.*FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: <HOST>.*, request: ".*"
 
 ignoreregex =
+
 
 # =========================
 # Ignored regex (legit crawlers / SSL noise)
