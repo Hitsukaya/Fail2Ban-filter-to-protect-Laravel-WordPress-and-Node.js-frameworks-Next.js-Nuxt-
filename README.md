@@ -32,6 +32,9 @@ sudo nano /etc/fail2ban/filter.d/laravel-wordpress.conf
 
 ```bash
 [Definition]
+# HITSUKAYA MASTER FILTER 
+# Powered by Valentaizar Hitsukaya - Update December 2025, 09
+# The power is power, but the brain is the most powerful tool
 
 # =========================
 # Sensitive files & config
@@ -63,7 +66,7 @@ failregex = ^<HOST> -.*"(GET|POST).*\.env.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*/horizon.*HTTP.*"
 
 # =========================
-# WordPress & CMS common paths
+# WordPress & CMS common paths & other
 # =========================
             ^<HOST> -.*"(GET|POST).*wp-admin.*HTTP.*"
             ^<HOST> -.*"(GET|POST).*wp-login\.php.*HTTP.*"
@@ -76,6 +79,17 @@ failregex = ^<HOST> -.*"(GET|POST).*\.env.*HTTP.*"
 			^<HOST> -.*"(GET|POST).*/phpmyadmin/.*HTTP.*"
 			^<HOST> -.*"(GET|POST).*/adminer\.php.*HTTP.*"
 			^<HOST> -.*"(POST).*/wp-json/wp/v2/.*HTTP.*"
+			# UPDATE - 09.12.2012  
+			^<HOST> -.*"(GET|POST|HEAD) /(wp-admin|wp-login\.php).* HTTP.*"
+			^<HOST> -.*"(POST) /xmlrpc\.php.* HTTP.*"
+			^<HOST> -.*"(GET|POST) .*setup-config\.php.* HTTP.*"
+			^<HOST> -.*"(GET|POST) .*/wp-content/.*\.php.* HTTP.*"
+			^<HOST> -.*"(GET|POST) .*/wp-includes/.*\.php.* HTTP.*"
+			^<HOST> -.*"(GET|POST) .*/wp-content/(plugins|themes|uploads)/.* HTTP.*"
+			^<HOST> -.*"(POST) /wp-json/wp/v2/.* HTTP.*"
+			^<HOST> -.*"(GET|POST) .*/(phpmyadmin|phpMyAdmin|pma|adminer\.php).* HTTP.*"
+			^<HOST> -.*"(GET|POST) .*\.(env|env\.local|env\.dist|git/config).* HTTP.*"
+			^<HOST> -.*"(GET|POST) .*(classwithtostring|radio|chosen|about|wp-conflg|index\.php\?|x\.php|alfa|ioxi|1\.php|wp-blog|wp-good)\.php.* HTTP.*"			
 
 # =========================
 # Node.js / Next.js / Nuxt
