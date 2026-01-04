@@ -1,0 +1,10 @@
+[phpmyadmin]
+enabled   = true
+filter    = phpmyadmin
+action    = iptables-multiport[name=phpmyadmin, port="80,443", protocol=tcp]
+logpath   = /var/log/nginx/hitsu-phpmyadmin.access.log
+maxretry  = 3
+bantime   = 7200
+findtime  = 600
+ignoreip  = 127.0.0.1/8 ::1 
+persistent = true
