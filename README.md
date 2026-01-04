@@ -221,6 +221,12 @@ Test Nginx configuration:
 sudo nginx -t
 ```
 
+# Fail2Ban Monitoring Script - Hitsukaya
+```bash
+chmod +x fail2ban-monitor.sh
+./fail2ban-monitor.sh
+```
+
 ----
 **Recommended OS:** RHEL-based distributions
 
