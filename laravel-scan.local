@@ -1,0 +1,9 @@
+[laravel-scan]
+enabled = true
+filter = laravel-scan
+port = http,https
+logpath = /var/log/nginx/access.log
+maxretry = 3
+bantime = 14400
+findtime = 600
+persistent = true
