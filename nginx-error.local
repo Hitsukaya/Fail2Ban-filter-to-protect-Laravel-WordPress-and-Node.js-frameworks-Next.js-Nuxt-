@@ -1,0 +1,8 @@
+[nginx-error]
+enabled = true
+filter = nginx-error
+logpath = /var/log/nginx/error.log
+maxretry = 1
+bantime = 3600
+findtime = 600
+persistent = true
