@@ -1,0 +1,10 @@
+[sshd]
+enabled = true
+port = 2222
+filter = sshd
+logpath = /var/log/secure
+maxretry = 3
+bantime = -1
+findtime = 600
+ignoreip = 127.0.0.1/8 ::1 
+persistent = true
