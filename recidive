@@ -1,0 +1,8 @@
+[recidive]
+enabled   = true
+filter    = recidive
+logpath   = /var/log/fail2ban.log
+action    = iptables-allports[name=recidive]
+bantime   = -1
+findtime  = 86400
+maxretry  = 5
