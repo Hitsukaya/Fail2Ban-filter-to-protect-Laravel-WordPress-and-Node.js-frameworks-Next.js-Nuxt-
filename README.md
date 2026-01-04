@@ -122,27 +122,27 @@ maxretry = 5
 
 ```
 ## Testing Filters
-# Before enabling a jail, test the filter against logs:
+## Before enabling a jail, test the filter against logs:
 
 ```bash
 fail2ban-regex /var/log/nginx/access.log laravel-scan.conf
 ```
 
-# This helps verify regex accuracy and avoid false positives.
+## This helps verify regex accuracy and avoid false positives.
 
 ## Notes
 
-# If you use phpMyAdmin occasionally, whitelist your IP to avoid lockouts.
+## If you use phpMyAdmin occasionally, whitelist your IP to avoid lockouts.
 
-# Adjust bantime and maxretry depending on traffic level.
+## Adjust bantime and maxretry depending on traffic level.
 
-# Filters are framework-agnostic where possible.
+## Filters are framework-agnostic where possible.
 
-# Intended for servers exposed to public traffic.
+## Intended for servers exposed to public traffic.
 
 ## How It Works
 
-A simplified view of traffic flow and defense:
+## A simplified view of traffic flow and defense:
 
      ┌────────────┐
      │   Client   │
@@ -206,19 +206,19 @@ sudo systemctl reload fail2ban
 ```
 
 ## Testing Filters and Jails
-# Test a filter against a log file:
+## Test a filter against a log file:
 
 ```bash
 fail2ban-regex /var/log/nginx/access.log /etc/fail2ban/filter.d/laravel-scan.conf
 ```
 
-# Check jail status:
+## Check jail status:
 ```bash
 sudo fail2ban-client status
 sudo fail2ban-client status <jail-name>
 ```
 
-# Test Nginx configuration:
+## Test Nginx configuration:
 ```bash
 sudo nginx -t
 ```
