@@ -132,10 +132,11 @@ fail2ban-regex /var/log/nginx/access.log laravel-scan.conf
 
 ## Notes
 
-If you use phpMyAdmin occasionally, whitelist your IP to avoid lockouts.
-Adjust 'bantime' and 'maxretry' depending on traffic level.
-Filters are framework-agnostic where possible.
-Intended for servers exposed to public traffic.
+- If you use phpMyAdmin occasionally, whitelist your IP to avoid lockouts.
+- Adjust 'bantime' and 'maxretry' depending on traffic level.
+- Filters are framework-agnostic where possible.
+- Intended for servers exposed to public traffic.
+
 
 ## How It Works
 
