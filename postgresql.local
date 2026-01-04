@@ -1,0 +1,10 @@
+[postgresql]
+enabled   = true
+port      = 00000
+filter    = postgresql
+logpath   = /var/lib/pgsql/data/pg_log/postgresql.log
+maxretry  = 3
+bantime   = 14400
+findtime  = 600
+ignoreip  = 127.0.0.1/8 ::1 
+persistent = true
