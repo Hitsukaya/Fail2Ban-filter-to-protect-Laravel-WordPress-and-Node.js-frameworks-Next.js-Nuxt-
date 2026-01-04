@@ -1,0 +1,11 @@
+[nginx-ratelimit]
+enabled  = true
+filter   = nginx-ratelimit
+action   = iptables[name=RateLimitNginx, port=http, protocol=tcp]
+logpath  = /var/log/nginx/access.log
+maxretry = 50
+findtime = 60
+bantime  = 14400
+banaction = iptables-multiport
+ignoreip = 127.0.0.1/8 ::1 
+persistent = true
