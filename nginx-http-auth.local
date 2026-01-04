@@ -1,0 +1,11 @@
+[nginx-http-auth]
+enabled = true
+port    = http,https
+filter  = nginx-http-auth
+logpath = /var/log/nginx/error.log
+bantime  = 14400
+findtime = 600
+maxretry = 3
+banaction = iptables-multiport
+ignoreip = 127.0.0.1/8 ::1 
+persistent = true
