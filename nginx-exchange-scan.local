@@ -1,0 +1,9 @@
+[nginx-exchange-scan]
+enabled  = true
+port     = http,https
+filter   = nginx-exchange-scan
+logpath  = /var/log/nginx/*access*.log
+maxretry = 3
+findtime = 600
+bantime  = -1
+action   = iptables[name=nginx-exchange-scan, port="http,https"]
