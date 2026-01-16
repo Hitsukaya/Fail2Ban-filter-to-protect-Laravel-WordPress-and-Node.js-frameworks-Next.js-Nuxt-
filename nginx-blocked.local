@@ -9,3 +9,18 @@ bantime   = 86400
 banaction = iptables-multiport
 ignoreip  = 127.0.0.1/8 ::1 
 persistent = true
+
+
+
+## UPDATE JAIL - Date Jan 16 2026
+[nginx-blocked]
+enabled   = true
+filter    = nginx-blocked
+action    = iptables[name=BlockedNginx, port=http, protocol=tcp]
+logpath   = /var/log/nginx/blocked_suspicious.log
+maxretry  = 3
+findtime  = 3600
+bantime   = -1
+banaction = iptables-multiport
+ignoreip  = 127.0.0.1/8 ::1 86.120.227.203
+persistent = true
