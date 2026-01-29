@@ -1,8 +1,8 @@
 [convertor]
 enabled  = true
 filter   = convertor
-action   = iptables[name=CONVERTOR, port=http, protocol=tcp]
-logpath  = /var/log/audit/audit.log
-bantime  = 86400
-findtime = 3600
-maxretry = 1
+port     = http,https
+logpath  = /var/log/nginx/convertor.access.log
+maxretry = 2
+findtime = 300
+bantime  = 1d
