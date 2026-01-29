@@ -1,8 +1,8 @@
 [convertor]
 enabled  = true
 filter   = convertor
-port     = http,https
-logpath  = /var/log/nginx/convertor.access.log
-maxretry = 2
-findtime = 300
-bantime  = 1d
+logpath  = /var/log/nginx/convertor-access.log
+maxretry = 1
+findtime = 600
+bantime  = 86400
+action   = iptables-allports[name=convertor]
