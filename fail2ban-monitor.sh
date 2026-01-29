@@ -16,5 +16,6 @@ fail2ban-client status phpmyadmin
 fail2ban-client status recidive
 fail2ban-client status nginx-ssl-handshake-protection
 fail2ban-client status nginx-exchange-scan
+fail2ban-client status convertor
 grep Ban /var/log/fail2ban.log | tail -n 5
 tail -n 10 /var/log/nginx/error.log
