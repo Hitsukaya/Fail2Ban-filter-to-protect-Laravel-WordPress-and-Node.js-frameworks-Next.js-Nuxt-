@@ -1,0 +1,8 @@
+[nginx-livewire]
+enabled  = true
+port     = http,https
+filter   = nginx-livewire
+logpath  = /var/log/nginx/*access*.log
+maxretry = 5
+findtime = 60
+bantime  = 86400
