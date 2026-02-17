@@ -1,0 +1,10 @@
+[nginx-envscan]
+enabled  = true
+port     = http,https
+filter   = nginx-envscan
+logpath  = /var/log/nginx/access.log
+maxretry = 3
+findtime = 600
+bantime  = -1
+banaction = firewallcmd-ipset
+ignoreip = 127.0.0.1/8 ::1 
