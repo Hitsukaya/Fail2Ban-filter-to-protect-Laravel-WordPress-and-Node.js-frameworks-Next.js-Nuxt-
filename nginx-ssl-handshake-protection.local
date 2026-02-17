@@ -1,10 +1,10 @@
-[nginx-ssl-handshake-protection]
+[nginx-ssl-handshake-protection] 
 enabled   = true
 port      = http,https
 filter    = nginx-ssl-handshake-protection
 logpath   = /var/log/nginx/error.log
 maxretry  = 3
-findtime  = 3600
+findtime  = 600
 bantime   = -1
-action 	  = iptables-multiport[name=nginx-ssl-handshake-protection, port="http,https", protocol=tcp]
-
+banaction = firewallcmd-ipset
+ignoreip = 127.0.0.1/8 ::1
